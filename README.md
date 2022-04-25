@@ -39,9 +39,20 @@ bir özelliğin gini değereri hesaplanır ve ağac ona göre bölünür.
 **1. Overfitting** : kısaca modelin çok iyi öğrenmesidir. Örneğin ağacın uzunlugu kısa olması gerekirken çok azınlık aykırı veri için yeni ve karmaşık dallanma oluşturmasıdır.
 
 Bu proplemi 2 yöntemle çözülebilir,
-**1. Prepruning (budama)** : Ağacı oluştururken oluşan gereksiz dallanmayı engellenmesi
+**1. Prepruning (budama)** : Ağacı oluştururken oluşan gereksiz dallanmayı engellenmesi.
+
 **2. Postpruning (budama)** : Ağacı oluşturduktan sonra en son budama işlemi yapılır.
 
+
+## Avantajları 
++ Anlaması kolay ve yorumlaması basittir.
++ Çok az veri hazırlığı gerekir.
++ Çoklu çıkış proplemleri çözülebilir.
+
+## Dezavantajları
++ Verilerdeki küçük değişikler tamamen farklı ağacın oluşmasına sebeğ olabilir.
++ Eğer bazı sınıflar baskınsa, önyargılı ağaclar oluşabilir.
++ karar ağacları, veri iyi genellemeyen karmaşık ağaclar oluşturabilirler.
 
 
 
