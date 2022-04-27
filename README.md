@@ -4,6 +4,9 @@
 Karar ağacları hem sınıflandırmada hemde bağlanım görevlerinde ve hatta çok cıktılı görevleri gerçekleştirebilen çok yönlü makine öğrenim algoritmasıdır.
 > Karar ağacları ayrıca rasgele orman (random forest) temel bileşenidir.
 
+
+![tree](https://scikit-learn.org/stable/_images/iris.svg)
+
 ## Nasıl Tahmin Yapar? Nasıl Çalışır?
 Bir düğümün 3 niteliği vardır;
 1. **Sample** : bir düğümün kac tane eğitim örneğinde uygulandığını sayar.
@@ -28,7 +31,7 @@ Son olarak her bir özelliğin ne kadar kazanç sağladığı bakılır.
 
 **Ağacın en tepesinde bu değere göre ayırmaya başlar ve alt ağaçları teker teker ayrılır.**
 
-### Gini Index (CART)
+### 2.Gini Index (CART)
 n kadar bütün olasılık değerleri karelerin toplamı 
 ![Gini]()
 
@@ -54,7 +57,24 @@ Bu proplemi 2 yöntemle çözülebilir,
 + Eğer bazı sınıflar baskınsa, önyargılı ağaclar oluşabilir.
 + karar ağacları, veri iyi genellemeyen karmaşık ağaclar oluşturabilirler.
 
+## Scikit learn kullanımı
+- kütüphane import edildi.
+```python
+from sklearn import tree
+```
+- ekiketleri ve varileri ayrıldı.
+```python
+y = df['IseAlindi']
+X = df.drop(['IseAlindi'], axis=1)
+```
+- tree olusturma
+```python
+# decision tree olusturma
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(X,y)
+```
 
-
-
-
+### Kaynakça
++ https://scikit-learn.org/stable/modules/tree.html#complexity
++ https://en.wikipedia.org/wiki/Decision_tree
++ https://www.youtube.com/watch?v=z_PCJeDOFOk
